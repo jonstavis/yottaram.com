@@ -1,0 +1,52 @@
+{% extends "base.twig" %}
+{% block content_wrapper %}
+  <div class="row">
+    <div class="col-xs-12 content-block">
+      <article>
+        <header>
+          <h2 class="blog-title"><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></h2>
+          <p class="date-published">{{ page.date | date("F j, Y") }}</p>
+        </header>
+          <div>
+              {{ page.blocks.content|raw }}
+          </div>
+      </article>
+    </div>
+  </div>
+  {% include 'includes/post/pagination.html' %}
+  {% include 'includes/section_break.html' %}
+
+  <div class="row">
+    <div class="col-xs-12 content-block">
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+          var disqus_shortname = 'yottaram'; 
+
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div> 
+  </div>
+
+  {% include 'includes/section_break.html' %}
+
+  <div class="row">
+    {% include 'includes/post/site.html' %}
+  </div>
+
+  {% include 'includes/section_break.html' %}
+
+  <div class="row">
+    {% include 'includes/post/contact.html' %}
+  </div>
+  {% include 'includes/section_break.html' %}
+
+    
+
+
+{% endblock %}

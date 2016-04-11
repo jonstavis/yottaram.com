@@ -1,0 +1,14 @@
+<article>
+  <div class="row">
+    <div class="col-xs-12 content-block">
+      <h2 class="blog-title"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
+      <p class="date-published">{{ post.date | date("F j, Y") }}</p>
+      {% set breaks = 
+        post.blocks.content|split('<!-- break -->', 2) %}
+      <div>
+        {{ breaks[0]|raw }}
+      </div>
+      <p class="read-more"><a class="info" href="{{ site.url }}{{ post.url }}">Read More</a><span class="pagination-separator">|</span><a class="info" href="{{ site.url }}{{ post.url }}/#disqus_thread">Comments (0)</a></p>
+    </div>
+  </div>
+</article>

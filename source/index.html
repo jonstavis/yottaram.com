@@ -1,0 +1,23 @@
+---
+layout: base
+
+---
+{% include 'includes/summary.html' %}
+{% include 'includes/section_break.html' %}
+
+{% for project in site.projects if project.featured %}
+  {% include 'includes/project.html' %}
+  {% if false %}
+    {% include 'includes/button.html' with {'text' : 'View More Projects', 'href' : "#{site.url}/projects" } %}
+  {% endif %}
+  {% include 'includes/section_break.html' %}
+{% endfor %}
+
+{% include 'includes/skills.html' %}
+{% include 'includes/section_break.html' %}
+
+{% include 'includes/contact.html' %}
+
+{% include 'includes/section_break.html' %}
+
+

@@ -1,0 +1,36 @@
+{% if page.pagination.previous_page or page.pagination.next_page %}
+{% include 'includes/section_break.html' %}
+<div class="row">
+  <div class="col-sm-12 hidden-xs content-block blog-pagination">
+    {% if page.pagination.next_page %}
+      <a class="pagination-active" href="{{ site.url }}{{ page.pagination.next_page.url }}" title="Older Posts">&lt; Older Posts</a>
+    {% else %}
+      <span class="pagination-inactive">&lt; older posts</span>
+      {% endif %}<span class="pagination-separator">|</span>
+    {% if page.pagination.previous_page %}
+      <a class="pagination-active" href="{{ site.url }}{{ page.pagination.previous_page.url }}" title="Newer Posts">Newer Posts &gt;</a>
+    {% else %}
+      <span class="pagination-inactive">newer posts &gt;</span>
+    {% endif %} 
+  </div>
+  <div class="col-xs-12 visible-xs content-block blog-pagination">
+    {% if page.pagination.next_page %}
+      <a class="pagination-active" href="{{ site.url }}{{ page.pagination.next_page.url }}" title="Older Posts">&lt; Older Posts</a>
+    {% else %}
+      <span class="pagination-inactive">&lt; older posts</span>
+      {% endif %}
+  </div>
+  <div class="col-xs-12 visible-xs content-block blog-pagination">
+    {% if page.pagination.previous_page %}
+      <a class="pagination-active" href="{{ site.url }}{{ page.pagination.previous_page.url }}" title="Newer Posts">Newer Posts &gt;</a>
+    {% else %}
+      <span class="pagination-inactive">newer posts &gt;</span>
+    {% endif %} 
+  </div>
+
+</div>
+
+  <div class="visible-sm visible-xs">
+    {% include 'includes/section_break.html' %}
+  </div>
+{% endif %}

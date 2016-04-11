@@ -1,0 +1,13 @@
+<section>
+<div class="row">
+  <div class="col-xs-12 content-block">
+    <h3>Archive</h3>
+    <ul class="list-unstyled">
+      {% for post in data.posts %}
+        <li><a class="category-link" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+</section>
+

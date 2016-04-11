@@ -1,0 +1,151 @@
+title: YOTTARAM
+subtitle: Software Design & Development
+author: Yottaram.com
+email: info@yottaram.com
+url: http://localhost:8001
+assets_version: 2
+twitter_url: https://twitter.com/jonstavis
+description: Yottaram specializes in building applications for early-stage startups and micro business entrepreneurs, guiding founders through the development process from design through implementation, launch, seeking funding, and building a technology team. 
+
+# main site summary (homepage)
+summary: Yottaram creates software that is well designed, skillfully implemented, and thoroughly usable.  We have a penchant for simple, elegant design and common sense.<br/><br/>We specialize in building applications for early-stage startups and micro business entrepreneurs, guiding founders through the development process from design through implementation, launch, seeking funding, and building a technology team.<br/><br/>Here are some of our recent projects:
+
+# todo - write a nl2p twig extension to get rid of <p> tags in this yml
+# about this site (blog index and single post)
+about_this_site: >
+  <p>This site was designed by <a href="http://wearehow.com" target="_blank">We Are How</a>.</p>
+  <p>This site is powered by Sculpin <a href="http://sculpin.io" target="_blank">static site generator</a> and the source is available <a href="https://github.com/jonstavis/yottaram.com" target="_blank">here</a>.
+  <p>Yotta = <a target="_blank" href="https://en.wikipedia.org/wiki/Yotta-">10^24</a>, or 1 000 000 000 000 000 000 000 000, the largest metric prefix.</p>
+
+# contact (homepage, blog index, and single post)
+contact: > 
+  <p>Get in touch to find out how we can help you refine your vision and implement a dynamite product that will help your business grow.  Our agile product development process is thoughtfully designed to give clients ongoing feedback and visibility from project inception to completion.</p>
+
+# skills sections (homepage)
+mobile_expertise: Our publicly available apps include the <a target="_blank" href="https://play.google.com/store/apps/details?id=com.yottaram.ssicalc">SSI/SSDI Disability Calculator</a> that estimates Social Security Disability benefits and how going back to work affects individuals, and eMoods, a <a target="_blank" href="http://emoodtracker.com">mood tracking program</a> that assists with mental health treatments.  Our apps have been downloaded over 100,000 times and we are actively adding features and supporting users. 
+
+# skills section
+skills_expertise: >
+  We are full-stack developers skilled in: 
+  <ul>
+  <li>PHP/Laravel</li> 
+  <li>Ruby/Rails</li> 
+  <li>Java/JEE</li> 
+  <li>RDBMS (MySQL, PostgreSQL)</li> 
+  <li>NoSQL (MongoDB)</li> 
+  <li>Javascript (JQuery, AngularJS)</li> 
+  <li>HTML/CSS</li> 
+  <li>Amazon AWS</li> 
+  <li>Stripe Payments</li>
+  <li>Mobile: Android/iOS</li>
+  </ul>
+
+# recent projects (homepage
+projects:
+    -
+        id: 1
+        name: Path For Life Self&nbsp;Nourishment
+        link: http://selfnourishment.pathforlife.com
+        technologies: Laravel, MySQL, Twitter Bootstrap, Stripe Payments
+        summary: >
+          <p>We worked with We Are How to build a subscription-based health and wellness web course and resource center.</p>
+          <p>Users subscribe using the Stripe Payments API and can complete the 18-week wellness program through sequential and timed steps.  Subscribers receive recipes, premium blog posts, and other resources.</p>
+        featured: true
+        app: false
+        images:
+          - 
+            filename: pfl/pfl1.jpg
+            alt: "Path For Life Screenshot 1"
+          - 
+            filename: pfl/pfl2.jpg
+            alt: "Path For Life Screenshot 2"
+          - 
+            filename: pfl/pfl3.jpg
+            alt: "Path For Life Screenshot 3"
+          - 
+            filename: pfl/pfl4.jpg
+            alt: "Path For Life Screenshot 4"
+          - 
+            filename: pfl/pfl5.jpg
+            alt: "Path For Life Screenshot 5"
+    -
+        id: 2
+        name: Paired Air
+        link: http://pairedair.com
+        technologies: Laravel, MySQL, Beanstalkd, Mandrill
+        summary: >
+          <p>We worked with Paired Air to solve the problem of inneficient redistribution channels for delivering goods and medication to recipients in developing nations.</p>
+          <p>Paired Air allows ordinary travellers destined for these nations to connect with non-profit organization shippers and carry these goods and medication in their suitcases.  Through a thorough vetting process, both shippers and couriers are reviewed, connected, and shipments executed.</p>
+        featured: true
+        app: false
+        images:
+          - 
+            filename: pairedair/pairedair1.jpg
+            alt: "Paired Air Screenshot 1"
+          - 
+            filename: pairedair/pairedair2.jpg
+            alt: "Paired Air Screenshot 2"
+          - 
+            filename: pairedair/pairedair3.jpg
+            alt: "Paired Air Screenshot 3"
+          - 
+            filename: pairedair/pairedair4.jpg
+            alt: "Paired Air Screenshot 4"
+          - 
+            filename: pairedair/pairedair5.jpg
+            alt: "Paired Air Screenshot 5"
+    -
+        id: 3
+        name: Motionry Marketplace
+        link: http://www.motionry.com
+        technologies: Laravel, MySQL, Twitter Bootstrap, Sphinx Search
+        summary: >
+          <p>We worked with Motionry to design and build a search engine and marketplace for matching sustainable technology seekers with innovators.</p>
+          <p>Innovators and seekers go through an approval process for this private service.  Innovators upload information about their innovations, which are curated and placed into a search index, allowing them to be found and contacted by seekers.</p>
+        featured: true
+        app: false
+        images:
+          - 
+            filename: motionry/motionry1.jpg
+            alt: "Motionry Screenshot 1"
+          - 
+            filename: motionry/motionry2.jpg
+            alt: "Motionry Screenshot 2"
+          - 
+            filename: motionry/motionry3.jpg
+            alt: "Motionry Screenshot 3"
+          - 
+            filename: motionry/motionry4.jpg
+            alt: "Motionry Screenshot 4"
+          - 
+            filename: motionry/motionry5.jpg
+            alt: "Motionry Screenshot 5"
+    -
+        id: 4
+        name: IndustRAY Job Insights
+        link: http://www.industray.com/ 
+        technologies: Laravel, MySQL, Twitter Bootstrap, Bayesian Analysis, LinkedIn API, SimplyHired API
+        summary: >
+          <p>We worked with IndustRAY to build a system for scraping job sites and extracting common skill keywords shared by similar job positions.</p>
+          <p>We also developed a Bayesian-like natural language processing algorithm for classifying job postings as being related to a particular experience level, such as junior, mid-senior, and director.</p>
+          <p>Together, this data is fed into informative visual reports illustrating skills and experience levels being sought across industries for specific job positions.</p>
+        featured: true
+        app: false
+        images:
+          - 
+            filename: industray/industray1.jpg
+            alt: "Industray Screenshot 1"
+          - 
+            filename: industray/industray2.jpg
+            alt: "Industray Screenshot 2"
+          - 
+            filename: industray/industray3.jpg
+            alt: "Industray Screenshot 3"
+          - 
+            filename: industray/industray4.jpg
+            alt: "Industray Screenshot 4"
+          - 
+            filename: industray/industray5.jpg
+            alt: "Industray Screenshot 5"
+
+

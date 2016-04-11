@@ -1,0 +1,7 @@
+imports:
+  - sculpin_site.yml
+title: YOTTARAM
+subtitle: Software Design & Development
+url: http://yottaram.com
+production: true
+

@@ -1,0 +1,29 @@
+---
+layout: base
+title: Blog
+description: Technology tips, howtos, tutorials, pitfalls, and suggestions focusing on web and mobile development from a full time software development freelancer.
+generator: pagination
+use:
+    - posts
+
+---
+<div class="row">
+  <div class="col-sm-8 col-xs-12 blog-main-content"> 
+    {% for post in page.pagination.items %}
+      {% include 'includes/blog/post.html' %}
+      {% if not loop.last %}
+        {% include 'includes/section_break.html' %}
+      {% endif %}
+    {% endfor %}
+    {% include 'includes/blog/pagination.html' %}
+  </div>
+  <div class="col-sm-4 col-xs-12 blog-sidebar"> 
+    {% include 'includes/blog/site.html' %}
+    {% include 'includes/blog/contact.html' %}
+  </div>
+</div>
+
+{% include 'includes/section_break.html' %}
+
+
+

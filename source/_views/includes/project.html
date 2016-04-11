@@ -1,0 +1,33 @@
+<section>
+  <div class="row">
+    <div class="col-xs-12 content-block">
+      <div class="col-sm-5"><h2>{{ project.name | raw }}</h2>
+        {{ project.summary| raw }}
+        {% if project.link %}
+          <p><a class="info" target="_blank" href="{{ project.link }}">View {{ project.app ? 'App' : 'Site' }}</a></p>
+        {% endif %}
+        <p class="project-type">{{ project.technologies }}</p></div>
+    <div class="col-sm-7 project-img-container">
+      <div id="carousel{{ project.id }}" class="carousel slide" data-interval="9999999999999">
+        <ol class="carousel-indicators">
+          {% for image in project.images %}
+            <li data-target="#carousel{{ project.id }}" data-slide-to="{{ loop.index0 }}" class="{{ loop.index == 1 ? 'active' : '' }}"></li>
+          {% endfor %}
+        </ol>
+
+        <div class="carousel-inner">
+          {% for image in project.images %}
+          <div class="item {{ loop.index == 1 ? 'active' : '' }}">
+              <img class="img-responsive" src="{{ site.url }}/images/{{ image.filename }}?{{ site.assets_version }}" alt="{{ image.alt }}" /> 
+          </div>
+          {% endfor %}
+        </div>
+ 
+          <a href="#carousel{{ project.id }}" data-slide="prev" class="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+          <a href="#carousel{{ project.id }}" data-slide="next" class="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      
+      </div>
+    </div>
+    </div>
+  </div>
+</section>

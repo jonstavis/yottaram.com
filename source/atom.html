@@ -1,0 +1,30 @@
+---
+permalink: atom.xml
+use:
+    - posts
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <title>Yottaram.com</title>
+    <link href="{{ site.url }}/atom.xml" rel="self"/>
+    <link href="{{ site.url }}"/>
+    <updated>{{ site.time|date("c") }}</updated>
+    <id>{{ site.url }}</id>
+    <author>
+        <name>{{ site.author }}</name>
+        <email>{{ site.email }}</email>
+    </author>
+
+    {% for post in data.posts %}
+        <entry>
+            <title>{{ post.title }}</title>
+            <link href="{{ site.url }}{{ post.url }}"/>
+            <updated>{{ post.date|date("c") }}</updated>
+            <id>{{ site.url }}{{ post.url }}</id>
+            <content type="html">
+                {{ post.blocks.content|escape("html") }}
+            </content>
+        </entry>
+    {% endfor %}
+</feed>

@@ -1,0 +1,31 @@
+<div class="row"><div class="col-xs-12 hr-empty">&nbsp;</div></div>
+{% if page.previous_post or page.next_post %}
+<div class="row">
+  <div class="col-sm-12 hidden-xs content-block blog-pagination">
+    {% if page.previous_post %}
+    <a class="pagination-active" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}">&lt; Previous Post: {{ page.previous_post.title }}</a>
+    {% else %}
+      <span class="pagination-inactive">&lt; Previous Post</span>
+      {% endif %}<span class="pagination-separator">|</span>
+    {% if page.next_post %}
+    <a class="pagination-active" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}">Next Post: {{ page.next_post.title }} &gt;</a>
+    {% else %}
+      <span class="pagination-inactive">Next Post &gt;</span>
+    {% endif %} 
+  </div>
+  <div class="col-xs-12 visible-xs content-block blog-pagination">
+    {% if page.previous_post %}
+    <a class="pagination-active" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}">&lt; Previous Post: {{ page.previous_post.title }}</a>
+    {% else %}
+      <span class="pagination-inactive">&lt; Previous Post</span>
+      {% endif %}
+  </div>
+  <div class="col-xs-12 visible-xs content-block blog-pagination">
+    {% if page.next_post %}
+    <a class="pagination-active" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}">Next Post: {{ page.next_post.title }} &gt;</a>
+    {% else %}
+      <span class="pagination-inactive">Next Post &gt;</span>
+    {% endif %} 
+  </div>
+</div>
+{% endif %}
