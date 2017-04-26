@@ -71,7 +71,6 @@ projects:
     -
         id: 2
         name: Paired Air
-        link: http://pairedair.com
         technologies: Laravel, MySQL, Beanstalkd, Mandrill
         summary: >
           <p>We worked with Paired Air to solve the problem of inneficient redistribution channels for delivering goods and medication to recipients in developing nations.</p>
@@ -97,7 +96,6 @@ projects:
     -
         id: 3
         name: Motionry Marketplace
-        link: http://www.motionry.com
         technologies: Laravel, MySQL, Twitter Bootstrap, Sphinx Search
         summary: >
           <p>We worked with Motionry to design and build a search engine and marketplace for matching sustainable technology seekers with innovators.</p>
